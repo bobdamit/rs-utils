@@ -8,7 +8,7 @@
 	<version>1.0.0</version>
 
 	<name>rsutil</name>
-	<url>http://rockscience.net</url>
+	<url>https://rockscience.net</url>
 
 
 	<properties>
@@ -26,7 +26,6 @@
 	</distributionManagement>	
 
 	<dependencies>
-
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
