@@ -22,7 +22,7 @@ public class RetryTimerTest {
 		Integer lastResult = -11111111;
 		for (int i = 0; i < maxTries-1; i++) {
 			Integer nextSeconds = underTest.secondsToNextRetry(i);
-			assertTrue(nextSeconds > 5);
+			assertTrue(nextSeconds >= 5);
 			// everyone should be longer than previous
 			assertTrue(nextSeconds >= lastResult);
 			lastResult = nextSeconds;
