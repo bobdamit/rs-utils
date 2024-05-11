@@ -4,6 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.rockscience</groupId>
+<<<<<<< HEAD
 	<artifactId>rsutil</artifactId>
 	<version>1.0.0</version>
 
@@ -11,6 +12,11 @@
 	<!-- FIXME change it to the project's website -->
 	<url>http://rockscience.net</url>
 
+=======
+	<artifactId>rsutils</artifactId>
+	<version>1.0.0</version>
+
+>>>>>>> 8b4408b7aa82114f438ef68630c71ec465f66770
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
