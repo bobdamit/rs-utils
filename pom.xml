@@ -4,12 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.rockscience</groupId>
-
 	<artifactId>rsutil</artifactId>
 	<version>1.0.0</version>
 
 	<name>rsutil</name>
-	<!-- FIXME change it to the project's website -->
 	<url>http://rockscience.net</url>
 
 
@@ -22,8 +20,8 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>GitHub bobdamit Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/bobdamit/rs-util</url>
+			<name>GitHub Rockscience Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/bobdamit/rs-utils</url>
 		</repository>
 	</distributionManagement>	
 
