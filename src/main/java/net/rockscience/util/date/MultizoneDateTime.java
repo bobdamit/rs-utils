@@ -110,38 +110,45 @@ public class MultizoneDateTime {
 		return this.getUtc().isAfter(other.getUtc());
 	}
 	
+
+	public ZonedDateTime getAtZone(ZoneId zoneId) {
+		if(zoneId.equals(internalDate.getZone())) {
+			return internalDate;
+		}
+		return convertZonedDateTimeToNewZone(internalDate, zoneId);
+	}
+	
 	/**
 	 * Return a {@link ZonedDateTime} at UTC timezone
 	 * @return
 	 */
 	public ZonedDateTime getUtc() {
-		if(utcZoneId.equals(internalDate.getZone())) {
-			return internalDate;
-		}
-		return convertZonedDateTimeToNewZone(internalDate, utcZoneId);
+		return getAtZone(utcZoneId);
 	}
-	
+
+
 	/**
 	 * Return a {@link ZonedDateTime} at Eastern timezone
 	 * @return
 	 */
 	public ZonedDateTime getEt() {
-		if(easternZoneId.equals(internalDate.getZone())) {
-			return internalDate;
-		}
-		return convertZonedDateTimeToNewZone(internalDate, easternZoneId);
+		return getAtZone(easternZoneId);
 	}
+
+
 	
 	/**
 	 * Return a {@link ZonedDateTime} at the system timezone
 	 * @return
 	 */
 	public ZonedDateTime getSystemLocal() {
-		if(ZoneId.systemDefault().equals(internalDate.getZone())) {
-			return internalDate;
-		}
-		return convertZonedDateTimeToNewZone(internalDate, ZoneId.systemDefault());
+		return getAtZone(ZoneId.systemDefault());
 	}
+
+	public static LocalDateTime toZoneLocal(MultizoneDateTime mdt, ZoneId zoneId) {
+		return mdt != null && zoneId != null ? mdt.getAtZone(zoneId).toLocalDateTime() : null;
+	}
+
 
 	/**
 	 * Null-safe return of just the {@link LocalDateTime} part in ET timezone
