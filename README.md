@@ -1,7 +1,7 @@
 # rs-utils
 A collection of my favorite reusable utils
 
-## net.rockscience.util.date.MultizoneDate
+## net.rockscience.util.date.MultizoneDateTime
 This is a very handy wrapper around a ZonedDateTime.  Lots of convenient null-safe static methods for building and converting dates in to different zones
 
 ## net.rockscience.util.enumz.StableOrderEnum 
