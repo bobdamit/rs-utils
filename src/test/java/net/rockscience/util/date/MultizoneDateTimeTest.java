@@ -3,11 +3,13 @@ package net.rockscience.util.date;
 
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.junit.jupiter.api.Test;
 
@@ -82,5 +84,29 @@ public class MultizoneDateTimeTest {
 		MultizoneDateTime mzd2 = MultizoneDateTime.fromEt(LocalDateTime.now().minusMinutes(10));
 	
 		assertTrue(mzd1.isAfter(mzd2));
+	}
+
+	@Test
+	public void testBeforeDifferentTimesDifferentZone() {
+		MultizoneDateTime mzd1 = MultizoneDateTime.fromEt(LocalDateTime.now().minusHours(5));
+		MultizoneDateTime mzd2 = MultizoneDateTime.fromUtc(LocalDateTime.now().plusMinutes(10));
+
+		assertTrue(mzd1.isBefore(mzd2));
+	}
+
+	@Test
+	public void testFormatLocal() {
+		MultizoneDateTime mzd1 = MultizoneDateTime.now();
+		String fmt = mzd1.format(DateTimeFormatter.ISO_DATE_TIME);
+
+		assertNotNull(fmt);
+	}
+
+	@Test
+	public void testFormatZoned() {
+		MultizoneDateTime mzd1 = MultizoneDateTime.now();
+		String fmt = mzd1.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+
+		assertNotNull(fmt);
 	}
 }

@@ -2,11 +2,12 @@ package net.rockscience.util.date;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import java.time.ZoneOffset;
 
 /**
  * Wrapper class for {@link ZonedDateTime} that provides simple declaritive
@@ -264,6 +265,15 @@ public class MultizoneDateTime {
 			return null;
 		}
 		return zonedDate.withZoneSameInstant(toZone);
+	}
+
+	/**
+	 * Wrap the format method.  Return null if null date
+	 * @param fmt the {@link DateTimeFormatter} to use
+	 * @return a formatted date string
+	 */
+	public String format(DateTimeFormatter fmt) {
+		return internalDate != null ? internalDate.format(fmt) : null;
 	}
 
 }

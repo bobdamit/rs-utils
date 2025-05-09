@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * A helper for compressing string lists to delimited strings and to 
  * expand delimited Strings into a string list
- * @author bdamiano
+ * @author Bob Damiano
  *
  */
 public class DelimitedStringList {
