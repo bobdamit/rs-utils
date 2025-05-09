@@ -2,6 +2,8 @@ package net.rockscience.util.enumz;
 
 /**
  * Helper to convert Enums to and from a stable integer code for persistence
+ * @author Bob Damiano
+ * @
  */
 public class StableOrderEnum {
 	private StableOrderEnum(){}

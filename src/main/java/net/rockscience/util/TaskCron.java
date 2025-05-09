@@ -7,6 +7,12 @@ import java.util.Set;
 
 import lombok.Data;
 
+/**
+ * Handy class to wrap the concept of a CRON for 
+ * DayS of week and day of month
+ * @author Bob Damiano
+ */
+
 @Data
 public class TaskCron {
 

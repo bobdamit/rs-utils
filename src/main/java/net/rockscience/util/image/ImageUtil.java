@@ -11,6 +11,10 @@ import javax.imageio.ImageIO;
 
 import lombok.Data;
 
+/**
+ * Image Utils for doing various conversions and manipulations
+ * @author bob damiano
+ */
 public class ImageUtil {
 	private ImageUtil() {}
 

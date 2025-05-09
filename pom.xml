@@ -5,7 +5,7 @@
 
 	<groupId>net.rockscience</groupId>
 	<artifactId>rsutil</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 
 	<name>rsutil</name>
 	<url>https://rockscience.net</url>
@@ -13,8 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>19</maven.compiler.source>
-		<maven.compiler.target>19</maven.compiler.target>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
 
 	<distributionManagement>

@@ -3,7 +3,10 @@ package net.rockscience.util;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
-
+/**
+ * Simple class to measure time spans
+ * @author Bob Damiano
+ */
 public class Timespan {
 	private LocalDateTime startTime;
 	private LocalDateTime endTime;

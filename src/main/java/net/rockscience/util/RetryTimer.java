@@ -2,6 +2,11 @@ package net.rockscience.util;
 
 import java.util.Random;
 
+/**
+ * Handy wrapper for doing retries in an escalated 
+ * time
+ * @author Bob Damiano
+ */
 public class RetryTimer {
 
 	private final int maxRetries;
